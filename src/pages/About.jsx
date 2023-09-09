@@ -13,7 +13,7 @@ export const About = () => {
                 <Container>
                     <Profile />
                 </Container>
-                <div className="container">
+                <div className="container" style={{ marginBottom: "40px" }}>
                     <div className="box">
                         <div className="about-area">
                             <Container>

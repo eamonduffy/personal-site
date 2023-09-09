@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { About } from "./pages/About";
 import { NoMatch } from "./pages/NoMatch";
 import { Layout } from "./components/Layout";
-import { Game } from "./components/Game";
+import { Game } from "./pages/Game";
 
 function App() {
     return (
