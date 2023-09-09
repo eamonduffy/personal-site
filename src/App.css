@@ -1,38 +1,266 @@
 .App {
-  text-align: center;
+    color: #ffffff;
+    width: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.secondary-text {
+    color: #a4a5a6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profile-pic {
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
+    border-radius: 50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.my-name {
+    color: #a4a5a6;
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.my-name:hover {
+    color: #dbdbdb;
+    text-align: center;
+    text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-icon {
+    height: 80px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.section-header {
+    color: #a4a5a6;
+    text-decoration: underline;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.section-border {
+    height: 200px;
+}
+
+.my-card {
+    background-color: #252525;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.skill {
+    margin-bottom: 10px;
+}
+
+.skill-name {
+    margin-bottom: 100px;
+}
+
+.skill-bar {
+    height: 13px;
+    background-color: #000;
+    border-radius: 3px;
+}
+
+.skill-per {
+    height: 15px;
+    background: #5b8fb9;
+    border-radius: 3px;
+    position: relative;
+    animation: fillBars 2.5s 1;
+}
+
+.skill-exp {
+    font-size: small;
+    height: 15px;
+    margin-bottom: -20px;
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    color: #000;
+}
+
+@keyframes fillBars {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.gallery-img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    /* cursor: pointer; */
+    transition: 0.3s;
+    padding-right: 30px;
+    margin-bottom: 10px;
+}
+
+.gallery-img:hover {
+    opacity: 0.7;
+}
+
+.nav-link:hover {
+    color: #5b8fb9;
+    text-decoration: underline 3px #5b8fb9;
+}
+
+.profile-icon {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.icon-style-git {
+    padding: 2px;
+    font-size: 34px;
+    color: white;
+    transition: 0.3s;
+}
+
+.icon-style-git:hover {
+    color: #333;
+}
+
+.icon-style-link {
+    padding: 2px;
+    font-size: 34px;
+    color: white;
+    transition: 0.3s;
+}
+
+.icon-style-link:hover {
+    color: #0072b1;
+}
+
+.icon-style-twitter {
+    padding: 2px;
+    font-size: 34px;
+    color: white;
+    transition: 0.3s;
+}
+
+.icon-style-twitter:hover {
+    color: #00acee;
+}
+
+.icon-style-you {
+    padding: 2px;
+    font-size: 34px;
+    color: white;
+    transition: 0.3s;
+}
+
+.icon-style-you:hover {
+    color: #c4302b;
+}
+
+.icon-style-game {
+    padding: 2px;
+    font-size: 34px;
+    color: white;
+    transition: 0.3s;
+}
+
+.icon-style-game:hover {
+    color: #48b92c;
+}
+
+/* main transparent card */
+.container {
+    /* position: relative;
+    font-family: sans-serif; */
+}
+
+.container .box {
+    width: 100%;
+    height: 100%;
+    /* padding: 1rem; */
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.074);
+    border: 1px solid rgba(255, 255, 255, 0.222);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 0.7rem;
+    transition: all ease 0.3s;
+    /* background-image: url("./img/gallery/image1.png"); */
+}
+
+.container .box:hover {
+    box-shadow: 0px 0px 20px 1px #ffbb763f;
+    border: 1px solid rgba(255, 255, 255, 0.454);
+}
+
+.play-area {
+    height: 400px;
+}
+
+#roo {
+    width: 75px;
+    height: 75px;
+    background-image: url("./img/roo-cropped.gif");
+    background-size: 75px 75px;
+    position: relative;
+    top: 325px;
+    left: 150px;
+}
+
+.jump {
+    background-image: url("./img/roo-cropped.gif");
+    animation: jump 0.5s linear;
+}
+
+@keyframes jump {
+    0% {
+        top: 325px;
+    }
+
+    30% {
+        top: 290px;
+    }
+
+    50% {
+        top: 230px;
+    }
+
+    80% {
+        top: 290px;
+    }
+
+    100% {
+        top: 325px;
+    }
+}
+
+#block {
+    width: 15px;
+    height: 30px;
+    position: relative;
+    top: 295px;
+    left: 95%;
+    background-color: #a4a5a6;
+}
+
+.blockAnimation {
+    animation-name: moveBlock;
+    animation-duration: 2s; /* Initial animation duration */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moveBlock {
+    0% {
+        left: 95%;
+    }
+    100% {
+        left: -5px;
+    }
 }
