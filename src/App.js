@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 
-import { About } from "./pages/About";
-import { NoMatch } from "./pages/NoMatch";
-import { Layout } from "./components/Layout";
-import { Game } from "./pages/Game";
+import { About } from "./pages/About.jsx";
+import { NoMatch } from "./pages/NoMatch.jsx";
+import { Layout } from "./components/Layout.jsx";
+import { Game } from "./pages/Game.jsx";
 
 function App() {
     return (
