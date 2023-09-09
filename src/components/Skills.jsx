@@ -1,18 +1,20 @@
 import "../App.css";
-
-import {
-    FaJava,
-    FaReact,
-    FaPython,
-    FaAngular,
-    FaAws,
-    FaGuitar,
-} from "react-icons/fa";
-import { SiMysql, SiRiotgames } from "react-icons/si";
-import { AiOutlineCloudServer } from "react-icons/ai";
+import { FaJava, FaReact, FaGuitar } from "react-icons/fa";
+import { SiUnrealengine, SiRiotgames } from "react-icons/si";
 import { GiMountainClimbing } from "react-icons/gi";
 
 export const Skills = () => {
+    const calculateYearsAgo = (year) => {
+        const currentYear = new Date().getFullYear();
+        const yearsAgo = currentYear - year;
+        return Math.floor(yearsAgo);
+    };
+
+    const frontEndYears = calculateYearsAgo(2017);
+    const backEndYears = calculateYearsAgo(2018);
+    const guitarYears = calculateYearsAgo(2018);
+    const unrealYears = calculateYearsAgo(2022);
+
     return (
         <div style={{ width: "100%" }}>
             <h4 className="section-header">Skills</h4>
@@ -23,7 +25,7 @@ export const Skills = () => {
                     </span>
                     <div className="skill-bar">
                         <div className="skill-per" style={{ maxWidth: "100%" }}>
-                            <p className="skill-exp">6 years</p>
+                            <p className="skill-exp">{frontEndYears} years</p>
                         </div>
                     </div>
                 </li>
@@ -33,7 +35,7 @@ export const Skills = () => {
                     </span>
                     <div className="skill-bar">
                         <div className="skill-per" style={{ maxWidth: "80%" }}>
-                            <p className="skill-exp">5 years</p>
+                            <p className="skill-exp">{backEndYears} years</p>
                         </div>
                     </div>
                 </li>
@@ -43,7 +45,7 @@ export const Skills = () => {
                     </span>
                     <div className="skill-bar">
                         <div className="skill-per" style={{ maxWidth: "60%" }}>
-                            <p className="skill-exp">Platinum</p>
+                            <p className="skill-exp">Emerald</p>
                         </div>
                     </div>
                 </li>
@@ -62,18 +64,18 @@ export const Skills = () => {
                         <FaGuitar /> Guitar
                     </span>
                     <div className="skill-bar">
-                        <div className="skill-per" style={{ maxWidth: "30%" }}>
-                            <p className="skill-exp">5 years</p>
+                        <div className="skill-per" style={{ maxWidth: "35%" }}>
+                            <p className="skill-exp">{guitarYears} years</p>
                         </div>
                     </div>
                 </li>
                 <li className="skill">
                     <span className="skill-name secondary-text">
-                        <AiOutlineCloudServer /> Unreal Engine
+                        <SiUnrealengine /> Unreal Engine
                     </span>
                     <div className="skill-bar">
-                        <div className="skill-per" style={{ maxWidth: "20%" }}>
-                            <p className="skill-exp">1.5 years</p>
+                        <div className="skill-per" style={{ maxWidth: "30%" }}>
+                            <p className="skill-exp">{unrealYears} years</p>
                         </div>
                     </div>
                 </li>

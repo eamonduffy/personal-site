@@ -1,6 +1,4 @@
-import ProfilePic from "../img/profilePic.png";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import { FaGithub, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 import { IoLogoGameControllerB } from "react-icons/io";
 import { Link } from "react-router-dom";

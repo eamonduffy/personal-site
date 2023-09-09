@@ -203,10 +203,14 @@ ul {
     height: 400px;
 }
 
+.about-area {
+    height: 100%;
+}
+
 #roo {
     width: 75px;
     height: 75px;
-    background-image: url("./img/roo-cropped.gif");
+    background-image: url("./static/img/roo-cropped.gif");
     background-size: 75px 75px;
     position: relative;
     top: 325px;
@@ -214,8 +218,8 @@ ul {
 }
 
 .jump {
-    background-image: url("./img/roo-cropped.gif");
-    animation: jump 0.5s linear;
+    background-image: url("./static/img/roo-cropped.gif");
+    animation: jump 0.6s linear;
 }
 
 @keyframes jump {
@@ -223,15 +227,15 @@ ul {
         top: 325px;
     }
 
-    30% {
+    25% {
         top: 290px;
     }
 
     50% {
-        top: 230px;
+        top: 250px;
     }
 
-    80% {
+    75% {
         top: 290px;
     }
 
@@ -241,12 +245,14 @@ ul {
 }
 
 #block {
-    width: 15px;
+    width: 30px;
     height: 30px;
     position: relative;
     top: 295px;
     left: 95%;
-    background-color: #a4a5a6;
+    /* background-color: #a4a5a6; */
+    background-image: url("./static/img/rolling-barrel.gif");
+    background-size: 30px 30px;
 }
 
 .blockAnimation {

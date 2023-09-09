@@ -22,7 +22,7 @@ export const Game = () => {
             setIsJumping(true);
             setTimeout(() => {
                 setIsJumping(false);
-            }, 300);
+            }, 600);
         }
     };
 
@@ -40,17 +40,14 @@ export const Game = () => {
             // Cleanup the event listener when the component unmounts
             document.removeEventListener("keydown", handleKeyDown);
         };
-    }, []);
+    }, []); // eslint-disable-line
 
     // Function to start the block animation
     const startBlockAnimation = () => {
         let block = document.getElementById("block");
 
-        // Generate a random animation duration between 1s and 5s
-        const randomDuration = Math.floor(Math.random() * 4000) + 1000; // between 1000ms (1s) and 5000ms (5s)
-
         // Apply the animation class with the random duration
-        block.style.animationDuration = `${randomDuration}ms`;
+        block.style.animationDuration = `2000ms`;
 
         // Add the animation class to start the animation
         block.classList.add("blockAnimation");
@@ -118,12 +115,12 @@ export const Game = () => {
 
             return () => clearInterval(interval); // Cleanup on unmount
         }
-    }, [countdown]);
+    }, [countdown]); // eslint-disable-line
     const currentFact = FunFacts[currentFactIndex];
 
     const refreshGame = () => {
         setGameStop(true);
-        setCountdown(5);
+        setCountdown(3);
         setScore(0);
         stopBlockAnimation();
         isAlive && clearInterval(isAlive);
@@ -131,7 +128,7 @@ export const Game = () => {
             setCountdown((prevCountdown) => prevCountdown - 1);
         }, 1000);
 
-        // After 5 seconds, clear the countdown and start the block animation
+        // After 3 seconds, clear the countdown and start the block animation
         setTimeout(() => {
             clearInterval(countdownInterval);
             setGameStop(true);
@@ -163,7 +160,7 @@ export const Game = () => {
                     }
                 }
             }, 10);
-        }, 5000);
+        }, 3000);
 
         return () => {
             clearInterval(countdownInterval);
@@ -227,7 +224,7 @@ export const Game = () => {
                             className={`${isJumping ? "jump" : ""}`}
                         ></div>
                         <div id="block"></div>
-                        {!gameStop && (
+                        {countdown !== 0 && !gameStop && (
                             <div style={cardStyle}>
                                 <Typography variant="subtitle1" sx={{ m: 1 }}>
                                     Jump as a kangaroo and uncover fun facts

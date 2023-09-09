@@ -15,7 +15,7 @@ export const About = () => {
                 </Container>
                 <div className="container">
                     <div className="box">
-                        <div className="play-area">
+                        <div className="about-area">
                             <Container>
                                 <Grid container spacing={2}>
                                     <Grid item md={12} sm={12}></Grid>
